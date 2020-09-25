@@ -2,19 +2,19 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';  
 
 @Component({
-  selector: 'app-root',
-  // templateUrl: './app.component.html',
-  templateUrl: '../views/customComponent.html',
-  styleUrls: ['./app.component.css']
+	selector: 'app-root',
+	// templateUrl: './app.component.html',
+	templateUrl: '../views/customComponent.html',
+	styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  title = 'Gaurav Angular App';
+	title = 'Gaurav Angular App';
 
-  show_true = true;
-  show_false = false;
+	show_true = true;
+	show_false = false;
 
-  movies: Movie[] = [  
+  	movies: Movie[] = [  
 		{title:'Zootopia',director:'Byron Howard, Rich Moore',cast:'Idris Elba, Ginnifer Goodwin, Jason Bateman',releaseDate:'March 4, 2016'},  
 		{title:'Batman v Superman: Dawn of Justice',director:'Zack Snyder',cast:'Ben Affleck, Henry Cavill, Amy Adams',releaseDate:'March 25, 2016'},  
 		{title:'Captain America: Civil War',director:'Anthony Russo, Joe Russo',cast:'Scarlett Johansson, Elizabeth Olsen, Chris Evans',releaseDate:'May 6, 2016'},  
@@ -60,8 +60,8 @@ class item {
 
 
 class Movie {  
-  title : string;  
-  director : string;  
-  cast : string;  
-  releaseDate : string;  
+	title : string;  
+	director : string;  
+	cast : string;  
+	releaseDate : string;  
 } 
