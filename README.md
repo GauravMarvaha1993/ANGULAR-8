@@ -31,7 +31,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 <!-- ============================ Commands To Start ======================================= -->
+
+ng -version  
+
+sudo npm uninstall -g angular-cli
+
 sudo npm install -g @angular/cli@latest
+
+ng update @angular/core  
 
 npm install bootstrap --save  
 
@@ -53,3 +60,14 @@ ng g c product-edit --skipTests=true
 
 <!-- If you have installed third-party packages right now, then it is not compatible with Angular 8. To solve the problem between Angular 8 and third-party packages, you have to install the following library. -->
 npm install rxjs-compat --save  # ANGULAR-8
+
+
+
+// Now, verify and clear the cache by using the following commands.
+
+npm cache verify  
+
+
+// Clean the cache by using the following command:
+
+npm cache clean

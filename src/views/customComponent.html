@@ -1,42 +1,71 @@
-<nav class="navbar navbar-expand-sm bg-light">  
-    <div class="container-fluid">  
-      <ul class="navbar-nav">  
-        <li class="nav-item">  
-          <a routerLink="product/create" class="nav-link" routerLinkActive="active">  
-            Create Product  
-          </a>  
-        </li>  
-        <li class="nav-item">  
-          <a routerLink="products" class="nav-link" routerLinkActive="active">  
-            Products  
-          </a>  
-        </li>   
-      </ul>  
-    </div>  
-  </nav>  
-  <!-- <div class="container">  
+<h2> Event Binding Example</h2>
+<button (click)="onSave($event)" ng-class="testClass">Save</button>
+<!--Event Binding-->
+<br><br><br><br>
+
+
+<h2>Two-way Binding Example</h2>
+<input [(ngModel)]="fullName" /> <br /><br />
+<p> {{fullName}} </p>
+
+
+<br><br><br><br>
+
+
+<div class="container">
+	<div class="form-group">
+		<label>
+			Email:
+		</label>
+		<input type="text"  value="{{ email.value }}" />
+		<!-- [formControl]="email" -->
+	</div>
+	<div class="form-group">
+		<button (click)="updateEmail()" class="btn btn-dark">Update Email</button>
+	</div>
+	<p>
+		Value: {{ email.value }}
+	</p>
+</div>
+
+
+
+
+
+<nav class="navbar navbar-expand-sm bg-light">
+	<div class="container-fluid">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a routerLink="product/create" class="nav-link" routerLinkActive="active">
+					Create Product
+				</a>
+			</li>
+			<li class="nav-item">
+				<a routerLink="products" class="nav-link" routerLinkActive="active">
+					Products
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- <div class="container">  
     <router-outlet></router-outlet>  
   </div>   -->
 
-<br>
-<br>
-<br>
-<br>
+<br><br><br><br>
+
+<img [src]="imgUrl" />
+
+<br><br><br><br>
 
 
-
-<button (click)="show_true = !show_true">{{show_true ? 'hide' : 'show'}}</button>  
-show_true = {{show_true}}  
-
-<br>
-<br>
-<br>
-<br>
-<br>
+<input type="hidden" #sum>
+<button (click)="sum.value = addTwoNumbers()">Calculation</button>
+<h2>Calculation is : {{ sum.value }}</h2>
 
 
-<button (click)="show_false = !show_false">{{show_false ? 'hide' : 'show'}}</button>  
-show_false = {{show_false}}  
+<button (click)="show_true = !show_true">{{show_true ? 'hide' : 'show'}}</button>
+show_true = {{show_true}}
 
 <br>
 <br>
@@ -45,8 +74,21 @@ show_false = {{show_false}}
 <br>
 
 
-<div *ngIf="show_true; else elseBlock">Text to show</div>  
-<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>  
+<button (click)="show_false = !show_false">{{show_false ? 'hide' : 'show'}}</button>
+show_false = {{show_false}}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p *ngIf="show_true">
+	{{ show_true }}
+</p>
+
+<div *ngIf="show_true; else elseBlock">Text to show</div>
+<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
 
 <br>
 <br>
@@ -58,38 +100,112 @@ show_false = {{show_false}}
 <br>
 
 <div class='panel panel-primary'>
-    <div class='panel-heading'>
-        {{title}}
-    </div>
-    <div class='panel-body'>
-        <div class='table-responsive'>
-            <table class='table'>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Director</th>
-                        <th>Cast</th>
-                        <th>Release Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let movie of movies;">
-                        <td>{{movie.title}}</td>
-                        <td>{{movie.director}}</td>
-                        <td>{{movie.cast}}</td>
-                        <td>{{movie.releaseDate}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+	<div class='panel-heading'>
+		{{title}}
+	</div>
+	<div class='panel-body'>
+		<div class='table-responsive'>
+			<table class='table'>
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Director</th>
+						<th>Cast</th>
+						<th>Release Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let movie of movies;">
+						<td>{{movie.title}}</td>
+						<td>{{movie.director}}</td>
+						<td>{{movie.cast}}</td>
+						<td>{{movie.releaseDate}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 
 
-<p *ngIf="show_true">  
-  {{ show_true }}  
-</p>  
 
-<p *ngIf="!show_false">  
-  {{ show_false }}
-</p> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<select [(ngModel)]="selectedValue">
+	<option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+</select>
+
+<div class='row' [ngSwitch]="selectedValue">
+	<div *ngSwitchCase="'One'">One is Pressed</div>
+	<div *ngSwitchCase="'Two'">Two is Selected</div>
+	<div *ngSwitchDefault>Default Option</div>
+</div>
+
+
+<br><br><br><br><br><br><br>
+
+
+<input type="hidden" #selection>
+
+<div class="card-container">
+	<div class="card card-small" (click)="selection.value = 'component'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>New Component</span>
+	</div>
+
+	<div class="card card-small" (click)="selection.value = 'material'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>Angular Material</span>
+	</div>
+
+	<div class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>Add PWA Support</span>
+	</div>
+
+	<div class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>Add Dependency</span>
+	</div>
+
+	<div class="card card-small" (click)="selection.value = 'test'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>Run and Watch Tests</span>
+	</div>
+
+	<div class="card card-small" (click)="selection.value = 'build'" tabindex="0">
+		<svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+
+		<span>Build for Production</span>
+	</div>
+</div>
+
+
+
+<!-- Terminal -->
+<div class="terminal" [ngSwitch]="selection.value">
+	<pre *ngSwitchDefault>ng generate component xyz</pre>
+	<pre *ngSwitchCase="'material'">ng add @angular/material</pre>
+	<pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
+	<pre *ngSwitchCase="'dependency'">ng add _____</pre>
+	<pre *ngSwitchCase="'test'">ng test</pre>
+	<pre *ngSwitchCase="'build'">ng build --prod</pre>
+</div>

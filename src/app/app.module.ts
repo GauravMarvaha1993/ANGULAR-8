@@ -6,6 +6,8 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductGetComponent } from './product-get/product-get.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 import { MovieAppComponent } from './movie-app/movie-app.component';
+import {FormsModule} from '@angular/forms';    
+import { ReactiveFormsModule } from '@angular/forms';  
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MovieAppComponent } from './movie-app/movie-app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
