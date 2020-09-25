@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-sm bg-light">  
+    <div class="container-fluid">  
+      <ul class="navbar-nav">  
+        <li class="nav-item">  
+          <a routerLink="product/create" class="nav-link" routerLinkActive="active">  
+            Create Product  
+          </a>  
+        </li>  
+        <li class="nav-item">  
+          <a routerLink="products" class="nav-link" routerLinkActive="active">  
+            Products  
+          </a>  
+        </li>   
+      </ul>  
+    </div>  
+  </nav>  
+  <!-- <div class="container">  
+    <router-outlet></router-outlet>  
+  </div>   -->
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<button (click)="show_true = !show_true">{{show_true ? 'hide' : 'show'}}</button>  
+show_true = {{show_true}}  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<button (click)="show_false = !show_false">{{show_false ? 'hide' : 'show'}}</button>  
+show_false = {{show_false}}  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div *ngIf="show_true; else elseBlock">Text to show</div>  
+<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{title}}
+    </div>
+    <div class='panel-body'>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies;">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<p *ngIf="show_true">  
+  {{ show_true }}  
+</p>  
+
+<p *ngIf="!show_false">  
+  {{ show_false }}
+</p> 
