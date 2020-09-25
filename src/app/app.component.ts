@@ -22,7 +22,7 @@ export class AppComponent {
 	];
 	
 	items: item[] = [{name: 'One', val: 1}, {name: 'Two', val: 2}, {name: 'Three', val: 3}];  
-	// selectedValue: string= 'One';  
+	selectedValue: string= 'Two';  
 
 	imgUrl="https://static.javatpoint.com/tutorial/angular7/images/angular-7-logo.png";
 
@@ -30,8 +30,8 @@ export class AppComponent {
 	numberA: number = 10;    
 	numberB: number = 20; 
 	   
-  addTwoNumbers() {    
-    return this.numberA + this.numberB;    
+  	addTwoNumbers() {    
+    	return this.numberA + this.numberB;    
 	}  
 	
 	onSave($event){    
@@ -40,14 +40,13 @@ export class AppComponent {
 	}
 	
 	fullName : string = 'this is test example';
-	selectedValue = '';
 
 
 
 
 	email = new FormControl('cfgvbh@vgbhjnm.gvbhjn');  
-  updateEmail() {  
-    this.email.setValue('sonoojaiswal@javatpoint.com');  
+  	updateEmail() {  
+    	this.email.setValue('sonoojaiswal@javatpoint.com');  
 	}  
 	
 
