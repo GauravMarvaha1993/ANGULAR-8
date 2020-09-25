@@ -6,7 +6,8 @@
 
 <h2>Two-way Binding Example</h2>
 <input [(ngModel)]="fullName" /> <br /><br />
-<p> {{fullName}} </p>
+<p> {{fullName | uppercase }} </p>
+<p> {{fullName | lowercase }} </p>
 
 
 <br><br><br><br>
@@ -139,7 +140,7 @@ show_false = {{show_false}}
 <br>
 
 <select [(ngModel)]="selectedValue">
-	<option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+	<option *ngFor="let item of items;" [value]="item.name">{{item.name }}</option>
 </select>
 
 <div class='row' [ngSwitch]="selectedValue">

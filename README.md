@@ -47,6 +47,7 @@ npm install bootstrap --save
 <!-- Start the Angular development server using the following command. =============================== -->
 ng serve -o  
 ng serve
+ng s // to run server
 
 
 <!-- =========== Use the following command to generate 3 Angular Components: ========================= -->
