@@ -14,6 +14,10 @@ import { SqrtPipe } from '../custom_pipes/app.sqrt';
 import { MyserviceService } from './myservice.service';
 
 import { HttpModule } from '@angular/http';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -23,18 +27,28 @@ import { HttpModule } from '@angular/http';
     ProductEditComponent,
     MovieAppComponent,
     ChangeTextDirective,
-    SqrtPipe, // custom pipe class
+    SqrtPipe,
+    HeaderComponent,
+    FooterComponent,
+    // UserloginComponent,
+    MainpageComponent, // custom pipe class
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    ReactiveFormsModule,
 
     RouterModule.forRoot([
       {
-         path: 'product-add',
-         component: ProductAddComponent
+        path: '',
+        component: UserloginComponent
+      },
+
+      {
+        path: 'product-add',
+        component: ProductAddComponent
       },
 
       {

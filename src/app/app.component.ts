@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 @Component({
 	selector: 'app-root',
 	// templateUrl: './app.component.html',
-	templateUrl: '../views/customComponent.html',
+	// templateUrl: '../views/customComponent.html',
+	templateUrl: '../views/main.html',
 	// templateUrl: '../views/routing-view.html',
 	styleUrls: ['./app.component.css']
 })
