@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductEditComponent implements OnInit {
 
+  title = 'Product Edit Page';
   constructor() { }
 
   ngOnInit(): void {

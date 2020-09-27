@@ -72,3 +72,17 @@ npm cache verify
 // Clean the cache by using the following command:
 
 npm cache clean
+
+
+ng serve --host 0.0.0.0 –port 4205
+
+
+
+<!-- Create Directives -->
+
+ng g directive changeText
+
+
+<!-- Create Services -->
+
+ng g service myservice

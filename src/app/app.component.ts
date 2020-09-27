@@ -1,14 +1,46 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';  
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 
 @Component({
 	selector: 'app-root',
 	// templateUrl: './app.component.html',
 	templateUrl: '../views/customComponent.html',
+	// templateUrl: '../views/routing-view.html',
 	styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
+
+	httpdata;
+	constructor(private http: Http) { }
+	ngOnInit() {
+		console.log('GAURAV MARVAHA');
+		/* this.http.get("http://jsonplaceholder.typicode.com/users")
+		.map((response) => response.json() )
+		.subscribe((data) => {
+			console.log(data);
+			this.displaydata(data);
+		}) */
+		
+	}
+
+	displaydata(data) {
+		console.log(data);
+		// this.httpdata = data;
+	}
+
+	getUsersList(){
+		this.http.get("http://jsonplaceholder.typicode.com/users")
+		.map((response) => response.json() )
+		.subscribe((data) => {
+			console.log(data);
+		})
+	}
+
+
 	title = 'Gaurav Angular App';
 
 	show_true = true;
@@ -30,7 +62,8 @@ export class AppComponent {
 	numberA: number = 10;    
 	numberB: number = 20; 
 	   
-  	addTwoNumbers() {    
+  	addTwoNumbers() { 
+		console.log("=============== Add Two Numbers ================");   
     	return this.numberA + this.numberB;    
 	}  
 	

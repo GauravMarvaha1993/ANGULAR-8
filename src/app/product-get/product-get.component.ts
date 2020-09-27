@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../myservice.service';
 
 @Component({
   selector: 'app-product-get',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductGetComponent implements OnInit {
 
-  constructor() { }
+  total;
+  todaydate;
+  constructor( private myservice: MyserviceService ) { }
 
   ngOnInit(): void {
+    this.total = 200;
+    this.todaydate = this.myservice.showTodayDate();
   }
 
 }
