@@ -2,9 +2,10 @@
 
 <button (click)="getUsersList()">Get User List</button>
 
+<ul *ngFor = "let data of httpdata">
+	<li>Name : {{data.name}} Address: {{data.address.city}}</li>
+ </ul>
 
-
-{{ httpdata }}
 
 <br><br><br><br>
 <br><br><br><br>

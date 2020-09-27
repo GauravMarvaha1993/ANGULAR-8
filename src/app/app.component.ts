@@ -18,18 +18,18 @@ export class AppComponent {
 	constructor(private http: Http) { }
 	ngOnInit() {
 		console.log('GAURAV MARVAHA');
-		/* this.http.get("http://jsonplaceholder.typicode.com/users")
+		this.http.get("http://jsonplaceholder.typicode.com/users")
 		.map((response) => response.json() )
 		.subscribe((data) => {
 			console.log(data);
 			this.displaydata(data);
-		}) */
+		})
 		
 	}
 
 	displaydata(data) {
 		console.log(data);
-		// this.httpdata = data;
+		this.httpdata = data;
 	}
 
 	getUsersList(){
@@ -37,6 +37,7 @@ export class AppComponent {
 		.map((response) => response.json() )
 		.subscribe((data) => {
 			console.log(data);
+			this.httpdata = data
 		})
 	}
 
