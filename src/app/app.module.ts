@@ -47,6 +47,11 @@ import { MainpageComponent } from './mainpage/mainpage.component';
       },
 
       {
+        path: 'app-mainpage',
+        component: MainpageComponent
+      },
+
+      {
         path: 'product-add',
         component: ProductAddComponent
       },

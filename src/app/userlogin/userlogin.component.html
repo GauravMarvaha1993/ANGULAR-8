@@ -9,6 +9,6 @@
         <input type="password" class="fortextbox" name="passwd" formControlName="passwd" />
 
         <div class="help">Use upper and lowercase lettes as well</div>
-        <button [disabled]="formdata.valid" value="Login">Login</button>
+        <button [disabled]="!formdata.valid" value="Login">Login</button>
     </form>
 </div>

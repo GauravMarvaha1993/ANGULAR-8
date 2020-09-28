@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';  
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-
+import { Router} from '@angular/router';
 
 @Component({
 	selector: 'app-root',
 	// templateUrl: './app.component.html',
 	// templateUrl: '../views/customComponent.html',
 	templateUrl: '../views/main.html',
+	// templateUrl: '../mainpage/mainpage.component.html',
 	// templateUrl: '../views/routing-view.html',
 	styleUrls: ['./app.component.css']
 })
@@ -16,15 +17,19 @@ import 'rxjs/add/operator/map';
 export class AppComponent {
 
 	httpdata;
+	cutomerdata;
 	constructor(private http: Http) { }
 	ngOnInit() {
 		console.log('GAURAV MARVAHA');
-		this.http.get("http://jsonplaceholder.typicode.com/users")
+		
+		// this.router.navigate(['app-mainpage']);
+
+		/* this.http.get("http://jsonplaceholder.typicode.com/users")
 		.map((response) => response.json() )
 		.subscribe((data) => {
 			console.log(data);
 			this.displaydata(data);
-		})
+		}) */
 		
 	}
 
