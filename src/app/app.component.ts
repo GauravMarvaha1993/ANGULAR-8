@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Router} from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
 	selector: 'app-root',
@@ -18,18 +19,20 @@ export class AppComponent {
 
 	httpdata;
 	cutomerdata;
-	constructor(private http: Http) { }
+	constructor(private http: Http, private cookie : CookieService, private router : Router ) { }
 	ngOnInit() {
 		console.log('GAURAV MARVAHA');
 		
 		// this.router.navigate(['app-mainpage']);
 
-		/* this.http.get("http://jsonplaceholder.typicode.com/users")
+		this.http.get("http://jsonplaceholder.typicode.com/users")
 		.map((response) => response.json() )
 		.subscribe((data) => {
 			console.log(data);
 			this.displaydata(data);
-		}) */
+		})
+
+		this.cookie.set("Name", "GAURAV MARVAHA");
 		
 	}
 

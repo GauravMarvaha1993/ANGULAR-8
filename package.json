@@ -28,6 +28,7 @@
     "mongo": "^0.1.0",
     "mysql": "^2.18.1",
     "ng2-slim-loading-bar": "^4.0.0",
+    "ngx-cookie-service": "^10.0.1",
     "nodemon": "^2.0.4",
     "rxjs": "~6.6.0",
     "rxjs-compat": "^6.6.3",
