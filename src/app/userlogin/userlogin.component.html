@@ -12,3 +12,10 @@
         <button [disabled]="!formdata.valid" value="Login">Login</button>
     </form>
 </div>
+
+
+{{ company && company.name }} <br>
+{{ company && company.address }} <br>
+
+{{ company ?.name }} <br>
+{{ company ?.address }} <br>

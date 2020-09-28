@@ -10,9 +10,20 @@ import { Router} from '@angular/router';
 })
 export class UserloginComponent implements OnInit {
 
+   company : any;
+
+   // headerName = 'Login Page';
    formdata;
    constructor(private router: Router) { }
    ngOnInit() {
+
+      setTimeout(() => {
+         this.company = {
+            name : 'Appinventiv',
+            address : 'B 25 Noida Sec 58'
+         }
+      }, 2000);
+
       console.log("=========== Init  User Login Page");
       this.formdata = new FormGroup({
          uname: new FormControl("", Validators.compose([

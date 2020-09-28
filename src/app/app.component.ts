@@ -21,8 +21,6 @@ export class AppComponent {
 	cutomerdata;
 	constructor(private http: Http, private cookie : CookieService, private router : Router ) { }
 	ngOnInit() {
-		console.log('GAURAV MARVAHA');
-		
 		// this.router.navigate(['app-mainpage']);
 
 		this.http.get("http://jsonplaceholder.typicode.com/users")
@@ -33,6 +31,12 @@ export class AppComponent {
 		})
 
 		this.cookie.set("Name", "GAURAV MARVAHA");
+		this.cookie.set("Mobile", "8881438096");
+		// console.log( this.cookie.check("Name") );
+		// console.log( this.cookie.get("Name") );
+		// console.log( this.cookie.getAll() );
+		// this.cookie.delete("Name");
+		this.cookie.deleteAll();
 		
 	}
 
