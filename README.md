@@ -86,3 +86,10 @@ ng g directive changeText
 <!-- Create Services -->
 
 ng g service myservice
+
+
+Component	ng g component new-component
+Directive	ng g directive new-directive
+Pipe	    ng g pipe new-pipe
+Service	    ng g service new-service
+Module	    ng g module my-module

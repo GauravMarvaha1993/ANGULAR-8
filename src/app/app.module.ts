@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { NewPipePipe } from './new-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     HeaderComponent,
     FooterComponent,
     // UserloginComponent,
-    MainpageComponent, // custom pipe class
+    MainpageComponent,
+    NewPipePipe, // custom pipe class
   ],
   imports: [
     BrowserModule,
