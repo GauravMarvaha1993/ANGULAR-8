@@ -43,8 +43,19 @@ import { NewPipePipe } from './new-pipe.pipe';
     ReactiveFormsModule,
 
     RouterModule.forRoot([
+      /* {
+        path: '',
+        component: UserloginComponent
+      }, */
+
       {
         path: '',
+        redirectTo : 'app-userlogin',
+        pathMatch : 'full'
+      },
+
+      {
+        path: 'app-userlogin',
         component: UserloginComponent
       },
 
