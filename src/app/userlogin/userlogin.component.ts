@@ -33,12 +33,14 @@ export class UserloginComponent implements OnInit {
          passwd: new FormControl("", this.passwordvalidation)
       });
    }
+
    passwordvalidation(formcontrol) {
       console.log('passwordvalidation');
       if (formcontrol.value.length < 5) {
          return {"passwd" : true};
       }
    }
+   
    onClickSubmit(data) {
       console.log(data.uname);
       if (data.uname == "systemadmin" && data.passwd == "admin123") {
