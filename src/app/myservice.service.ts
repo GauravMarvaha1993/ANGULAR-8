@@ -4,6 +4,7 @@ import { throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { endPoints } from 'src/environments/environment';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { UserModel } from './models/userModel';
 
 
 @Injectable({
@@ -13,6 +14,7 @@ export class MyserviceService {
 
     url = endPoints.url + 'users/';
 
+    // constructor() { }
     constructor(private _http: HttpClient) { }
 
     getAllUsers() {
@@ -46,7 +48,7 @@ export class MyserviceService {
 }
 
 
-class UserModel {
+/* class UserModel {
     public constructor(
         public user_name: string,
         public user_email: string,
@@ -56,4 +58,4 @@ class UserModel {
         public user_hobbies: string,
         public user_city: string
     ) { }
-}
+} */
