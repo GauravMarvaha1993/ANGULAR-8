@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';  
+import { FormGroup, FormControl, Validators } from '@angular/forms'; 
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Router} from '@angular/router';
@@ -19,7 +19,18 @@ export class AppComponent {
 
 	httpdata;
 	cutomerdata;
-	constructor(private http: Http, private cookie : CookieService, private router : Router ) { }
+
+	form: FormGroup;
+  	projects: Project[];
+
+	constructor(private http: Http, private cookie : CookieService, private router : Router ) {
+
+		this.projects = [
+			new Project("Web Development"),
+			new Project("UX"),
+			new Project("SEO")
+		  ];
+	}
 	ngOnInit() {
 		// this.router.navigate(['app-mainpage']);
 
@@ -112,3 +123,11 @@ class Movie {
 	cast : string;  
 	releaseDate : string;  
 } 
+
+class Project {
+	id: number;
+	name: string;
+	constructor(name: string) {
+	  this.name = name;
+	}
+}

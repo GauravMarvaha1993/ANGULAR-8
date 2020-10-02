@@ -19,6 +19,20 @@ import { FooterComponent } from './footer/footer.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { NewPipePipe } from './new-pipe.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +55,9 @@ import { NewPipePipe } from './new-pipe.pipe';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
+    MatAutocompleteModule,
+    MatInputModule,
 
     RouterModule.forRoot([
       /* {
@@ -79,7 +96,13 @@ import { NewPipePipe } from './new-pipe.pipe';
         component: ProductEditComponent
       }
 
-   ])
+   ]),
+
+    BrowserAnimationsModule
+  ],
+
+  exports: [
+    MatAutocompleteModule, MatInputModule
   ],
   providers: [
     MyserviceService,
