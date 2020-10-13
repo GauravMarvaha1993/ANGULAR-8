@@ -38,15 +38,15 @@ export class AppComponent {
 	ngOnInit() {
 		// this.router.navigate(['app-mainpage']);
 
-		this.http.get("http://jsonplaceholder.typicode.com/users")
-		.map((response) => response.json() )
-		.subscribe((data) => {
-			console.log(data);
-			this.displaydata(data);
-		})
+		// this.http.get("http://jsonplaceholder.typicode.com/users")
+		// .map((response) => response.json() )
+		// .subscribe((data) => {
+		// 	console.log(data);
+		// 	this.displaydata(data);
+		// })
 
-		this.cookie.set("Name", "GAURAV MARVAHA");
-		this.cookie.set("Mobile", "8881438096");
+		// this.cookie.set("Name", "GAURAV MARVAHA");
+		// this.cookie.set("Mobile", "8881438096");
 		// console.log( this.cookie.check("Name") );
 		// console.log( this.cookie.get("Name") );
 		// console.log( this.cookie.getAll() );

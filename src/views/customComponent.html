@@ -157,7 +157,7 @@ show_false = {{show_false}}
 	<option *ngFor="let item of items;" [value]="item.name">{{item.name }}</option>
 </select>
 
-<div class='row' [ngSwitch]="selectedValue">
+<div class='row' [(ngSwitch)]="selectedValue">
 	<div *ngSwitchCase="'One'">One is Pressed</div>
 	<div *ngSwitchCase="'Two'">Two is Selected</div>
 	<div *ngSwitchDefault>Default Option</div>

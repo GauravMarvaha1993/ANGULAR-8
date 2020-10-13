@@ -63,16 +63,16 @@ import { SignUpComponentComponent } from './sign-up-component/sign-up-component.
         MatInputModule,
 
         RouterModule.forRoot([
-            /* {
+            {
               path: '',
               component: UserloginComponent
-            }, */
+            },
 
-            {
+            /* {
                 path: '',
                 redirectTo: 'app-userlogin',
                 pathMatch: 'full'
-            },
+            }, */
 
             {
                 path: 'app-sign-up-component',
