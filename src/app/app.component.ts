@@ -1,3 +1,7 @@
+
+// Major part of the development with Angular 7 is done in the components. 
+// Components are basically classes that interact with the .html file of the component, which gets displayed on the browser.
+
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'; 
 import { Http } from '@angular/http';
@@ -47,7 +51,7 @@ export class AppComponent {
 		// console.log( this.cookie.get("Name") );
 		// console.log( this.cookie.getAll() );
 		// this.cookie.delete("Name");
-		this.cookie.deleteAll();
+		// this.cookie.deleteAll();
 		
 	}
 
